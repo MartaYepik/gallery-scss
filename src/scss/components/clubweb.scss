@@ -1,0 +1,98 @@
+$decoration-color: #E5E5E5;
+$regular: "Aeonik-Regular",sans-serif;
+$bold:"Aeonik-Bold",sans-serif;
+$light: "Aeonik-Light", sans-serif;
+.developers-wrapper{
+    margin: 52px;
+}
+h1{
+    font-family: $bold;
+}
+.intro{
+    margin-top: 20px;
+    color: $decoration-color;
+}
+.block-image{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 24px;
+    .item {
+        min-width: 282px;
+        height: 304px;
+        border-radius: 5px;
+        display: flex;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        .dev-info {
+                align-self: flex-end;
+                max-height: 75px;
+                width: 100%;
+                background: rgba(9, 7, 7, 0.4);
+                backdrop-filter: blur(25px);
+                border-radius: 0px 0px 5px 5px;
+                padding: 10px 20px ;
+        
+                .name p{
+                    font-size: 20px;
+                }
+        
+                .details {
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    margin-top: 6px;
+                    margin-bottom: 6px;
+                    .language {
+                        font-size: 14px;
+                        display: flex;
+                        p{
+                            display: flex;
+                            white-space: nowrap;
+                            align-items: center;
+                            
+                        }
+                        img{
+                            margin-right: 6px;
+                        }
+                    }
+        
+                    .chat{
+                        display: flex;
+                            white-space: nowrap;
+                            align-items: center;
+                        
+                    }
+                }
+            }
+    }
+}
+
+@for $i from 1 through 6 {
+    .item-#{$i} {
+        background-image: url("../img/picture/#{$i}.png");
+    }
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+button{
+    @include button;
+}
+
+@media screen and (max-width: 1303px) {
+    h1, .intro{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .block-image{
+        justify-content: center;
+    }
+}

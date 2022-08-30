@@ -1,0 +1,16 @@
+@mixin button{
+background-color: #3775ED;
+border-radius: 5px;
+color: #FFFFFF;
+font-size: 14px;
+padding: 16px 62px;
+border: none;
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: scale(1.1);
+    }
+}
